@@ -11,7 +11,7 @@ export const Layout = () => {
                 animate={{ y: 0 }}
                 transition={{ duration: 0.5 }}
             >
-                <AppBar position="sticky">
+                <AppBar position="fixed" sx={{ top: 0, zIndex: 1100 }}>
                     <Toolbar>
                         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                             Аналитическая панель
@@ -22,7 +22,7 @@ export const Layout = () => {
                     </Toolbar>
                 </AppBar>
             </motion.div>
-            <Container maxWidth="xl" sx={{ py: 4 }}>
+            <Container maxWidth="xl" sx={{ py: 4, mt: 8 }}>
                 <Outlet />
             </Container>
         </Box>
